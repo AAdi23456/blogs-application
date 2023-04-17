@@ -3,7 +3,8 @@ const app=express()
 const router=require("./routes/reg")
 app.use(express.json())
 const connect=require("./database/db")
-
+const cors=require("cors")
+app.use(cors())
 
 app.use("/",router)
 
